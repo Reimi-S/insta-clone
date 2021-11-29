@@ -8,7 +8,7 @@ import {
   MenuIcon,
 } from '@heroicons/react/outline';
 import { HomeIcon } from '@heroicons/react/solid';
-import { signIn, useSession } from 'next-auth/react';
+import { useSession } from 'next-auth/react';
 
 function Header() {
   const { data: session } = useSession();
@@ -61,9 +61,8 @@ function Header() {
           <UserGroupIcon className="navBtn" />
           <HeartIcon className="navBtn" />
           <img
-            onClick={signOut}
             //src="https://links.papareact.com/3ke"
-            src={session.user.image}
+            src={session?.user?.image}
             alt="profile pic"
             className="h-10 rounded-full cursor-pointer"
           />

@@ -61,9 +61,8 @@ function Header() {
           <UserGroupIcon className="navBtn" />
           <HeartIcon className="navBtn" />
           <img
-            onClick={signOut}
             //src="https://links.papareact.com/3ke"
-            src={session.user.image}
+            src={session?.user?.image}
             alt="profile pic"
             className="h-10 rounded-full cursor-pointer"
           />
