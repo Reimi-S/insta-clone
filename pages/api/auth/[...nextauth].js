@@ -15,9 +15,15 @@ export default NextAuth({
     signIn: '/auth/signin',
   },
 
-  theme: {
-    logo: 'https://links.papareact.com/sq0',
-    brandColor: '#f133287',
-    colorScheme: 'auto',
+  callbacks: {
+    async session({ session, token, user }) {
+      session.user.username = session.user.name
+        .split(' ')
+        .join('')
+        .toLocaleLowerCase();
+
+      session.user.uid = token.sub;
+      return session;
+    },
   },
 });
