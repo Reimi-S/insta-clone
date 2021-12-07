@@ -23,6 +23,7 @@ function Stories() {
 
       {suggestions.map((profile) => (
         <Story
+          //img={profile.avatar}
           key={profile.id}
           img={profile.avatar}
           username={profile.username}
