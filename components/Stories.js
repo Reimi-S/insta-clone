@@ -1,4 +1,4 @@
-import faker from 'faker';
+import faker from '@faker-js/faker';
 import { useEffect, useState } from 'react';
 import Story from './Story';
 import { useSession } from 'next-auth/react';
